@@ -7,8 +7,6 @@ public class Plant : MonoBehaviour
     [SerializeField] private PlantData info;
 
     private SetPlantInfo spi;
-    private PlayerHealth playerHealth;
-
 
     private void Start()
     {
@@ -31,9 +29,6 @@ public class Plant : MonoBehaviour
             // We can call it like that because dead is a static variable
             PlayerController.dead = true;
             FindObjectOfType<PlayerHealth>().PlayerHP = 0;
-            //FindObjectOfType<PlayerHealth>().TakeDamage(100);
-            
-
         }
     }
 }
